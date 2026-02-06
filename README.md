@@ -90,7 +90,7 @@ Tarayıcınızda otomatik olarak `http://localhost:8501` adresi açılacaktır.
 ```
 ses-tespit-sistemi/
 ├── src/
-│   ├── ui/                        # ✨ NEW: Modular UI Components
+│   ├── ui/                        # Modular UI Components
 │   │   ├── __init__.py
 │   │   ├── tab_stt.py            # STT tab with recording
 │   │   ├── tab_tts.py            # TTS tab with transient output
@@ -105,15 +105,15 @@ ses-tespit-sistemi/
 │   ├── reference_voices/         # Referans ses dosyaları
 │   ├── test_audio/               # Test ses dosyaları
 │   └── training_data/            # ML eğitim verisi
-├── app.py                        # ✨ Refactored: Entry point only (~230 lines)
+├── app.py                        # Entry point only (~230 lines)
 ├── train_model.py                # ML model eğitim scripti
-├── requirements.txt              # ✨ Updated: Version constraints
-├── Dockerfile                    # ✨ NEW: Production Docker image
-├── .dockerignore                 # ✨ NEW: Docker optimization
-└── README.md                     # Bu dosya
+├── requirements.txt              # Version constraints
+├── Dockerfile                    # Production Docker image
+├── .dockerignore                 # Docker optimization
+└── README.md                     
 ```
 
-## Yeni Özellikler (Portfolio-Ready Upgrade)
+## Yeni Özellikler
 
 ### 🎙️ Tarayıcı Ses Kaydı
 - STT ve Test sekmelerinde doğrudan mikrofondan kayıt
@@ -187,10 +187,3 @@ docker run -p 8501:8501 ses-tespit-sistemi
 - Model boyutunu küçültün
 - RAM'inizi artırın
 
-## Lisans
-
-Bu proje eğitim amaçlı geliştirilmiştir.
-
-## Katkıda Bulunanlar
-
-Sinyal ve Görüntü İşleme Dersi Projesi
