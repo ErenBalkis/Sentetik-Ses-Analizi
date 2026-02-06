@@ -1,0 +1,28 @@
+# 1. Python Gereksiz Dosyaları (EKRAN GÖRÜNTÜNDE VAR)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 2. Sanal Ortam (EKRAN GÖRÜNTÜNDE VAR - venv)
+venv/
+env/
+.env
+
+# 3. Veri ve Modeller (EKRAN GÖRÜNTÜNDE VAR - data, models)
+# Büyük dosyaları engelle, sadece kod gitsin.
+models/
+data/
+*.pth
+*.pt
+*.bin
+*.wav
+*.mp3
+
+# 4. IDE ve Sistem Dosyaları
+.vscode/
+.idea/
+.DS_Store
+
+# 5. Geçici Çıktılar (Test ederken oluşanlar)
+output_tts.wav
+sentezlenmis_ses.wav
