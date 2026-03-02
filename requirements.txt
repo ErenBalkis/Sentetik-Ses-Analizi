@@ -1,23 +1,34 @@
 # Deep Audio Detection System - Requirements
-# Portfolio-Ready with Version Constraints
+# Version-pinned for reproducible builds
 
-# Core ML & Audio Processing
-openai-whisper>=20230314
-TTS>=0.22.0
-librosa>=0.10.0
+# ── Deep Learning (kurulum sırası önemli: önce torch) ──────────────────────────
+# torch>=2.6 ile xtts_v2 yüklemesi weights_only=True nedeniyle bozuluyor; <2.6 ile sınırla
+torch>=2.1.0,<2.6.0
+torchaudio>=2.1.0,<2.6.0
+
+# ── Speech-to-Text ──────────────────────────────────────────────────────────────
+# openai-whisper numpy 2.x ile uyumsuz → numpy üst sınırı zorunlu
+openai-whisper>=20231117
+
+# ── Text-to-Speech ──────────────────────────────────────────────────────────────
+# Orijinal 'TTS' paketi artık bakımsız (unmaintained).
+# Resmi devam projesi: coqui-tts  |  0.27.4+ sürümünde torch ayrıca kurulmalı (yukarıda mevcut).
+coqui-tts>=0.25.0
+# transformers>=4.45 isin_mps_friendly'yi kaldırdı → coqui-tts bu API'ye bağımlı
+transformers>=4.40.0,<4.45.0
+
+# ── Core ML & Audio Processing ──────────────────────────────────────────────────
+librosa>=0.10.0,<0.11.0
+# numpy 2.x whisper ve birçok ses kütüphanesiyle uyumsuz — <2.0.0 zorunlu
 numpy>=1.24.0,<2.0.0
 pandas>=2.0.0
 scikit-learn>=1.3.0
 lightgbm>=4.0.0
 
-# Web Framework
+# ── Web Framework ───────────────────────────────────────────────────────────────
 streamlit>=1.28.0
 plotly>=5.17.0
 
-# Audio I/O
+# ── Audio I/O ───────────────────────────────────────────────────────────────────
 soundfile>=0.12.0
 pydub>=0.25.0
-
-# Deep Learning
-torch>=2.0.0
-torchaudio>=2.0.0

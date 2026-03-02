@@ -1,28 +1,67 @@
-# 1. Python Gereksiz Dosyaları (EKRAN GÖRÜNTÜNDE VAR)
+# ── Python ──────────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
 
-# 2. Sanal Ortam (EKRAN GÖRÜNTÜNDE VAR - venv)
+# ── Sanal Ortam ─────────────────────────────────────────────────────────────────
 venv/
 env/
+.venv/
 .env
 
-# 3. Veri ve Modeller (EKRAN GÖRÜNTÜNDE VAR - data, models)
-# Büyük dosyaları engelle, sadece kod gitsin.
-models/
+# ── Veri ve Medya Dosyaları ──────────────────────────────────────────────────────
+# Büyük dosyaları repoya ekleme; sadece kod takip edilir.
 data/
+*.wav
+*.mp3
+*.ogg
+*.flac
+
+# ── ML Model Dosyaları ───────────────────────────────────────────────────────────
+# Eğitilmiş modeller ve indirilen derin öğrenme ağırlıkları
+models/
+*.pkl
 *.pth
 *.pt
 *.bin
-*.wav
-*.mp3
+*.ckpt
+*.safetensors
 
-# 4. IDE ve Sistem Dosyaları
+# ── Coqui TTS Model Cache ────────────────────────────────────────────────────────
+# İndirilen TTS modelleri (XTTS-v2 ~1.8 GB)
+tts_models/
+
+# ── IDE ve Editör ────────────────────────────────────────────────────────────────
 .vscode/
 .idea/
-.DS_Store
+*.swp
+*.swo
 
-# 5. Geçici Çıktılar (Test ederken oluşanlar)
+# ── İşletim Sistemi ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Geçici Çıktılar ─────────────────────────────────────────────────────────────
 output_tts.wav
 sentezlenmis_ses.wav
+*.tmp
+
+# ── Log Dosyaları ────────────────────────────────────────────────────────────────
+*.log
+docker_build_log*.txt
+docker_build_out*.txt
+
+# ── Jupyter ──────────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Coverage ve Test ────────────────────────────────────────────────────────────
+.coverage
+htmlcov/
+.pytest_cache/
