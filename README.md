@@ -145,10 +145,10 @@ ses-tespit-sistemi/
 
 ```bash
 # Image oluştur
-docker build -t ses-tespit-sistemi .
+docker build -t Sentetik-Ses-Analizi .
 
 # Çalıştır
-docker run -p 8501:8501 ses-tespit-sistemi
+docker run -p 8501:8501 Sentetik-Ses-Analizi
 
 # Tarayıcıda aç: http://localhost:8501
 ```
