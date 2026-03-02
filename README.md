@@ -191,7 +191,17 @@ Kullanıcı Sesi
 Docker ortamında `COQUI_TOS_AGREED=1` env değişkeni eksik olabilir.
 
 ```bash
+<<<<<<< HEAD
 docker run -e COQUI_TOS_AGREED=1 -p 8501:8501 sentetik-ses-analizi
+=======
+# Image oluştur
+docker build -t Sentetik-Ses-Analizi .
+
+# Çalıştır
+docker run -p 8501:8501 Sentetik-Ses-Analizi
+
+# Tarayıcıda aç: http://localhost:8501
+>>>>>>> c9b636d7129c6436bb62eb98456c620114335968
 ```
 
 </details>
